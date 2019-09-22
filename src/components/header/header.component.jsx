@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.styles.scss';
 
-export const Header = () => (
+const Header = () => (
   <div className='header'>
     <section className='logo-container'>LOGO</section>
     <section className='contact-options'>
