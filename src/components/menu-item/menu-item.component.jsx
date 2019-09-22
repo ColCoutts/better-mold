@@ -1,9 +1,11 @@
 import React from 'react';
 import './menu-item.styles.scss';
 
+import CustomButton from '../custom-button/custom-button.component';
+
 const MenuItem = ({ title }) => (
   <div className='menu-item'>
-    <h1>{title}</h1>
+    <CustomButton className='title'>{title}</CustomButton>
   </div>
 );
 
