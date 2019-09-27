@@ -8,6 +8,7 @@ import './directory.styles.scss';
 
 import PortfolioMenuItem from '../portfolio-menu-item/portfolio-menu-item.component';
 import AboutMenuItem from '../about-menu-item/about-menu-item.component';
+
 const sections = [
   {
     id: 1,

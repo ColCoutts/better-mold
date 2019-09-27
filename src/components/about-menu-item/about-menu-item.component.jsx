@@ -4,18 +4,19 @@ import { createStructuredSelector } from 'reselect';
 
 import './about-menu-item.styles.scss';
 
-import { togglePageHidden } from '../../redux/page/page.action.js';
-import { selectPageHidden } from '../../redux/page/page.selectors';
+import { toggleAboutHidden } from '../../redux/about/about.action.js';
+import { selectAboutHidden } from '../../redux/about/about.selectors.js';
 
 import CustomButton from '../custom-button/custom-button.component';
+
 import AboutPage from '../../pages/about/about-page.component';
 
 //maybe cant have just one menu item / instead each menu item should be thought
 // of as their own page
 
-const AboutMenuItem = ({ title, togglePageHidden, hidden }) => (
+const AboutMenuItem = ({ title, hidden, toggleAboutHidden }) => (
   hidden ? 
-  <div className='about-menu-item' onClick={togglePageHidden}>
+  <div className='about-menu-item' onClick={toggleAboutHidden}>
   <CustomButton>
     {title}
   </CustomButton>
@@ -24,11 +25,11 @@ const AboutMenuItem = ({ title, togglePageHidden, hidden }) => (
 );
 
 const mapStateToProps = state => createStructuredSelector({
-  hidden: selectPageHidden
+  hidden: selectAboutHidden
 })
 
 const mapDispatchToProps = dispatch => ({
-  togglePageHidden: () => dispatch(togglePageHidden())
+  toggleAboutHidden: () => dispatch(toggleAboutHidden())
 });
 
 export default connect(

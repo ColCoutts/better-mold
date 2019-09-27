@@ -1,12 +1,12 @@
-import PageActionTypes from './page.types';
+import WorkActionTypes from './work.types';
 
 const INITIAL_STATE = {
   hidden: true
 };
 
-const pageReducer = (state = INITIAL_STATE, action) => {
+const workReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case PageActionTypes.TOGGLE_PAGE_HIDDEN:
+    case WorkActionTypes.TOGGLE_WORK_HIDDEN:
       return {
         ...state,
         hidden: !state.hidden
@@ -16,4 +16,4 @@ const pageReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default pageReducer;
+export default workReducer;
