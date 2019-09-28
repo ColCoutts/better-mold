@@ -8,6 +8,7 @@ import './directory.styles.scss';
 
 import PortfolioMenuItem from '../portfolio-menu-item/portfolio-menu-item.component';
 import AboutMenuItem from '../about-menu-item/about-menu-item.component';
+import FieldNotesMenuItem from '../field-notes-menu-item/field-notes-menu-item.component';
 
 const sections = [
   {
@@ -31,7 +32,7 @@ const sections = [
 const Directory = () => (
   <div className='directory'>
       <PortfolioMenuItem key={sections[0].id} title={sections[0].title} />
-      <AboutMenuItem key={sections[1].id} title={sections[1].title} />
+      <FieldNotesMenuItem key={sections[1].id} title={sections[1].title} />
       <AboutMenuItem key={sections[2].id} title={sections[2].title} />
       <AboutMenuItem key={sections[3].id} title={sections[3].title} />
   </div>
